@@ -155,12 +155,6 @@ async function getUserContent(userId) {
     throw error;
   }
 }
-document.getElementById('parallelBtn').addEventListener('click', async () => {
-  const userId = 1;
-  const data = await fetchDataInParallel(userId);
-  displayResults(data, document.getElementById('output'));
-});
-
 document.getElementById('errorHandlingBtn').addEventListener('click', async () => {
   const userId = 1;
   const data = await fetchDataWithErrorHandling(userId);
@@ -196,4 +190,5 @@ function displayResults(data, container) {
     cleartheContainer(container);
     createHTMLElements(data);
 }
+
 
